@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
   
+#  root to: 'toppages#index'
 
-  root to: 'toppages#index'
+#  get 'sessions/new'
+#  get 'sessions/create'
+#  get 'sessions/destroy'
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'users/index'
-  get 'users/show'
-  get 'users/new'
-  get 'users/create'
+#  get 'users/index'
+#  get 'users/show'
+#  get 'users/new'
+#  get 'users/create'
 
   root to: 'tasks#index'
 
