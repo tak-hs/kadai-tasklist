@@ -12,9 +12,11 @@
     <tbody>
       <% @tasks.each do |tasks| %>
         <tr>
-          <td><%= tasks.id %></td>
+          <td><%= link_to tasks.id, edit_task_path(tasks) %></td>
           <td><%= tasks.status %></td>
           <td><%= tasks.content %></td>
+          <td><%= link_to 'Edit', edit_task_path(tasks), class: 'btn btn-default' %></td>
+          <td><%= link_to "Delete", tasks, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %></td>
         </tr>
       <% end %>
     </tbody>

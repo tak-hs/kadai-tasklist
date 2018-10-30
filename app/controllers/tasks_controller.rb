@@ -44,7 +44,6 @@ class TasksController < ApplicationController
 
   def destroy
     @tasks.destroy
-
     flash[:success] = 'Task は正常に削除されました'
     redirect_to tasks_url
   end
@@ -63,7 +62,7 @@ class TasksController < ApplicationController
 
 
   def correct_user
-    @taskst = current_user.tasks.find_by(id: params[:id])
+    @tasks = current_user.tasks.find_by(id: params[:id])
     unless @tasks
       redirect_to root_url
     end
